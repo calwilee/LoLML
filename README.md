@@ -769,7 +769,7 @@ Before starting any modeling, we will first clean the dataset briefly. Just like
   </tbody>
 </table> 
 
-![poro](/images/training.webp)
+![poro](/images/trainporo.jpg_large)
 ## Baseline Model
 
 Let’s start by creating a baseline model for prediction. This serves as a good starting point for more advanced modeling techniques. 

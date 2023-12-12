@@ -808,6 +808,14 @@ We will choose to keep gold and xp differences, as we feel that these features a
 
 In league of legends, the first team to slay 4 dragons gets a soul buff. This buff provides a massive boost in stats to the team that acquires it. We engineered this feature through the drake columns of the data. We will one hot encode this column, but we expect teams that acquire a soul to win much more than teams who do not. 
 
+<div class="table-wrapper" markdown="block">
+
+<iframe src="barchartdrag.html" width=725 height=500 frameBorder=0></iframe>
+
+</div>
+
+Securing a soul greatly improves a team’s chance of winning. 
+
 > `golddiffat15` (Quantitative)
 
 Gold differences should serve as a good measurement of how ahead a team is at the 15 minute mark. Teams with positive gold differences should be stronger than the opponents, and therefore more likely to win the match. We standardized this feature in our feature engineering. 
@@ -852,7 +860,20 @@ We applied `StandardScaler()` to both `golddiffat15` and `xpdiffat15`, as these 
 
 ## Fairness Analysis
 ![fairness](/images/fairness.jpeg){: width="800" }
- 
+To finish, we will run a fairness analysis on our model. For this analysis, we will be looking at the model's performance based on the region. Specifically, we will be looking at **South Korea** and **North America** (US and Canada). We selected these two regions because South Korea is considered one of the best in the world while North America is subpar. We are interested in seeing if our model can perform well in different regions despite the skill disparity. We'll still use accuracy to record our model's performance as incorrect and correct predictions still hold the same weight despite the fact that we have limited the regions. 
+
+**Null Hypothesis:** The model performs just as well on both regions.
+**Alternative Hypothesis:** The model performs better on one region compare to the other.
+**Test Statistic:** Absolute difference between accuracies
+**Significance Level:** 0.05
+
+<div class="table-wrapper" markdown="block">
+
+<iframe src="permtest.html" width=725 height=500 frameBorder=0></iframe>
+
+</div>
+
+Because our p-value of 0.324 is greater than our alpha of .05, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions
 
 
 

@@ -808,11 +808,15 @@ We will choose to keep gold and xp differences, as we feel that these features a
 
 In league of legends, the first team to slay 4 dragons gets a soul buff. This buff provides a massive boost in stats to the team that acquires it. We engineered this feature through the drake columns of the data. We will one hot encode this column, but we expect teams that acquire a soul to win much more than teams who do not. 
 
+
+
 <div class="table-wrapper" markdown="block">
 
 <iframe src="assets/barchartdrag.html" width=725 height=500 frameBorder=0></iframe>
 
 </div>
+
+
 
 Securing a soul greatly improves a team’s chance of winning. 
 
@@ -867,11 +871,13 @@ To finish, we will run a fairness analysis on our model. For this analysis, we w
 **Test Statistic:** Absolute difference between accuracies\
 **Significance Level:** 0.05
 
+
 <div class="table-wrapper" markdown="block">
 
 <iframe src="assets/permtest.html" width=725 height=500 frameBorder=0></iframe>
 
 </div>
+
 
 Because our **p-value of 0.324** is greater than our alpha of **0.05**, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions
 

@@ -798,22 +798,31 @@ Our baseline model reached a training accuracy of around 99.9% and a test accura
 ## Final Model
 ![exciteporo](/images/excitedporo.webp) 
 Now that we've completed our base model, it is time to improve upon it and create our final model. 
-We will choose to keep gold and xp differences, as we feel that these features are integral to predicting game outcomes. As for the other features we used in our baseline model, we feel that we can improve upon these, so we will be using ________. We will also construct additional features.
+We will choose to keep gold and xp differences, as we feel that these features are integral to predicting game outcomes. After trial and error and pruning our features, we found our baseline model’s nominal features have minimal impact on training accuracy. Therefore, we decided to select different features in replacement of these. 
 
 ## Engineered Features
 
-> `soul_type`
+> `soul_type` (Nominal)
 
 In league of legends, the first team to slay 4 dragons gets a soul buff. This buff provides a massive boost in stats to the team that acquires it. We engineered this feature through the drake columns of the data. We will one hot encode this column, but we expect teams that acquire a soul to win much more than teams who do not. 
 
-> `golddiffat15`
+> `golddiffat15` (Quantitative)
 
-Gold differences should serve as a good measurement of how ahead a team is at the 15 minute mark. Teams with positive gold differences should be stronger than the opponents, and therefore more likely to win the match. 
+Gold differences should serve as a good measurement of how ahead a team is at the 15 minute mark. Teams with positive gold differences should be stronger than the opponents, and therefore more likely to win the match. We standardized this feature in our feature engineering. 
+
+> `xpdiffat15` (Quantitative)
+
+Similarly to gold differences, the greater of an xp advantage a team has over their opponent, the stronger the team should be. Therefore, we expect teams with greater xp advantages to win more than those with smaller advantages. We standardized this feature in our feature engineering.
+
+## Additional Features
+
+> `inhibitors`
 
 
-> `xpdiffat15`
 
-Similarly to gold differences, the greater of an xp advantage a team has over their opponent, the stronger the team should be. Therefore, we expect teams with greater xp advantages to win more than those with smaller advantages. 
+
+
+
 
 
 

@@ -862,9 +862,9 @@ We applied `StandardScaler()` to both `golddiffat15` and `xpdiffat15`, as these 
 ![fairness](/images/fairness.jpeg){: width="800" }
 To finish, we will run a fairness analysis on our model. For this analysis, we will be looking at the model's performance based on the region. Specifically, we will be looking at **South Korea** and **North America** (US and Canada). We selected these two regions because South Korea is considered one of the best in the world while North America is subpar. We are interested in seeing if our model can perform well in different regions despite the skill disparity. We'll still use accuracy to record our model's performance as incorrect and correct predictions still hold the same weight despite the fact that we have limited the regions. 
 
-**Null Hypothesis:** The model performs just as well on both regions.
-**Alternative Hypothesis:** The model performs better on one region compare to the other.
-**Test Statistic:** Absolute difference between accuracies
+**Null Hypothesis:** The model performs just as well on both regions.\
+**Alternative Hypothesis:** The model performs better on one region compare to the other.\
+**Test Statistic:** Absolute difference between accuracies\
 **Significance Level:** 0.05
 
 <div class="table-wrapper" markdown="block">
@@ -873,7 +873,7 @@ To finish, we will run a fairness analysis on our model. For this analysis, we w
 
 </div>
 
-Because our p-value of 0.324 is greater than our alpha of .05, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions
+Because our **p-value of 0.324** is greater than our alpha of **0.05**, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions
 
 
 

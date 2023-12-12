@@ -818,13 +818,40 @@ Similarly to gold differences, the greater of an xp advantage a team has over th
 
 ## Additional Features
 
-> `inhibitors` (Nominal)
+> `inhibitors` (Quantitative)
 
 Inhibitors protect the team's nexuses. This makes this structure a very strong feature to include in our model for a number of reasons. Firstly, a team cannot damage the enemy team's nexus without destroying at least one inhibitor. Therefore a team cannot win if they do not break an inhibitor. This fact alone makes this feature very strong. Secondly, breaking an inhibitor grants a team super minions, effectively forcing one opponent to clear these minions, leaving them stuck in their base for 5 minutes, until the inhibitor respawns. This gives the team a huge advantage in securing objectives, as they essentially will always have a numbers advantage. 
 
 ## Algorithm and Hyperparameters
 
-For this model, we chose to use a Random Forest classifier in order to train multiple decision trees on our data and reduce the risk of overfitting. 
+For this model, we chose to use a Random Forest classifier in order to train multiple decision trees on our data and reduce the risk of overfitting. We tuned our hyperparameters with a gridsearch. Our search produced varying results, but we received best test accuracy with a `max_depth` of 12, `n_estimators` of 5 and a entropy as our `criterion`. 
+
+## Baseline Improvements 
+We made several improvements to our baseline model improving our test accuracy from 84% to 96%. Our training accuracy did not change significantly. We attribute this improvement to a number of factors: 
+
+
+> Our baseline model was based purely off of domain knowledge
+
+We selected our features based on our past experiences with League of Legends. With our final model, we ran a number of trials in order to determine which features provided the most impact, as well as examined some features more rigorously. 
+
+
+> Inhibitors
+
+We came to the realization that inhibitors should be a very strong feature, as a value of 0 in this feature guarantees a loss for the team. Including inhibitors greatly improved our accuracy. 
+
+
+> Hyperparameters
+
+We did not tune our hyperparameters for our baseline model, compared to the tuning we did for our final model. This is another source of improvement in test accuracy. 
+
+
+> Feature Engineering
+
+We engineered our own feature, `soul_type`. This feature essentially summarizes the dragon columns. We used `OneHotEncoder()` on this feature. 
+We applied StandardScaler() to both `golddiffat15` and `xpdiffat15`, as these features had a large range.  
+
+
+ 
 
 
 

@@ -10,7 +10,7 @@ Since we are using post-game data, we would have access to all the data presente
 
 > A Note on Data Cleaning
 
-Before starting any modeling, we will first clean the dataset briefly. Just like in our Ban Analysis, we are only going to look at games that come from tier one leagues, Worlds, and MSI as they consist of the best players in each region and in the world. We also utilize only the summary rows that describe game outcome and summary statistics of the match. Finally, we chose to drop rows that are labled as incomplete data. Here are the first few rows of the DataFrame we will be working with:
+Before starting any modeling, we will first clean the dataset briefly. Just like in our [Ban Analysis](https://calwilee.github.io/LoLEDA/){:target="_blank"}, we are only going to look at games that come from tier one leagues, Worlds, and MSI as they consist of the best players in each region and in the world. We also utilize only the summary rows that describe game outcome and summary statistics of the match. Finally, we chose to drop rows that are labled as incomplete data. Here are the first few rows of the DataFrame we will be working with:
 
 <table border="1" class="dataframe">
   <thead>
@@ -810,7 +810,7 @@ In league of legends, the first team to slay 4 dragons gets a soul buff. This bu
 
 <div class="table-wrapper" markdown="block">
 
-<iframe src="barchartdrag.html" width=725 height=500 frameBorder=0></iframe>
+<iframe src="assets/barchartdrag.html" width=725 height=500 frameBorder=0></iframe>
 
 </div>
 
@@ -869,7 +869,7 @@ To finish, we will run a fairness analysis on our model. For this analysis, we w
 
 <div class="table-wrapper" markdown="block">
 
-<iframe src="permtest.html" width=725 height=500 frameBorder=0></iframe>
+<iframe src="assets/permtest.html" width=725 height=500 frameBorder=0></iframe>
 
 </div>
 

@@ -774,32 +774,28 @@ Before starting any modeling, we will first clean the dataset briefly. Just like
 
 Let’s start by creating a baseline model for prediction. This serves as a good starting point for more advanced modeling techniques. 
 
-## Quantitative Features
+> Quantitative Features
 
-> `golddiffat15`
+- `golddiffat15`
+- `xpdiffat15`
 
-> `xpdiffat15`
+> Nominal Features
 
-## Nominal Features
+- `firstdragon` (0 / 1)
+- `firstbaron` (0 / 1)
+- `firstherald` (0 / 1)
+- `firstblood` (0 / 1)
+- `firsttothreetowers` (0 / 1)
 
-> `firstdragon` (0 / 1)
+> Response Variable
 
-> `firstbaron` (0 / 1)
+- `Result` win(1), lose(0)
 
-> `firstherald` (0 / 1)
+All of our nominal data was already encoded as 0 or 1, so we had no need to one hot encode it! 
 
-> `firstblood` (0 / 1)
+> Baseline Conclusion 
 
-> `firsttothreetowers` (0 / 1)
-
-
-## Response Variable
-
-> `Result` win(1), lose(0)
-
-## Baseline Conclusion 
-
-Our baseline model reached a training accuracy of around 99.9% and a test accuracy of around 84%. The discrepancy between the training and test accuracy is due to our model overfitting to the training data and not being able to generalize as well as we would like. Despite this however, we believe that our model has good performance as it has good accuracy. In addition to that, it makes intuitive sense that teams with initial gold, experience and objective advantage are more likely to win, making our features that we selected a good base to start with. Lets see if we can take our model a bit further!
+Our baseline model reached a training accuracy of around 99.9% and a test accuracy of around 84%. The discrepancy between the training and test accuracy is due to our model overfitting to the training data and not being able to generalize as well as we would like. Despite this however, we believe that our model has good performance as it has good accuracy on both the training and test set. In addition to that, it makes intuitive sense that teams with initial gold, experience and objective advantage are more likely to win, making our features that we selected a good base to start with. Lets see if we can take our model a bit further!
 
 ## Final Model
 ![exciteporo](/images/excitedporo.webp) 

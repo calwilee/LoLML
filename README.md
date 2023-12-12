@@ -795,5 +795,23 @@ Let’s start by creating a baseline model for prediction. This serves as a good
 
 Our baseline model reached a training accuracy of around 99.9% and a test accuracy of around 84%. The discrepancy between the training and test accuracy is due to our model overfitting to the training data and not being able to generalize as well as we would like. Despite this however, we believe that our model has good performance as it has good accuracy. In addition to that, it makes intuitive sense that teams with initial gold, experience and objective advantage are more likely to win, making our features that we selected a good base to start with. Lets see if we can take our model a bit further!
 
+## Final Model
+Now that we've completed our base model, it is time to improve upon it and create our final model. 
+We will choose to keep gold and xp differences, as we feel that these features are integral to predicting game outcomes. As for the other features we used in our baseline model, we feel that we can improve upon these, so we will be using ________. We will also construct additional features.
+
+> `golddiffat15`
+
+Gold differences should serve as a good measurement of how ahead a team is at the 15 minute mark. Teams with positive gold differences should be stronger than the opponents, and therefore more likely to win the match. 
+
+> `xpdiffat15`
+
+Similarly to gold differences, the greater of an xp advantage a team has over their opponent, the stronger the team should be. Therefore, we expect teams with greater xp advantages to win more than those with smaller advantages. 
+
+> `soul_type`
+
+In league of legends, the first team to slay 4 dragons gets a soul buff. This buff provides a massive boost in stats to the team that acquires it. We engineered this feature through the drake columns of the data. We will one hot encode this column, but we expect teams that acquire a soul to win much more than teams who do not. 
+
+
+
 
 

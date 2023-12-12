@@ -851,7 +851,8 @@ We engineered our own feature, `soul_type`. This feature essentially summarizes 
 We applied `StandardScaler()` to both `golddiffat15` and `xpdiffat15`, as these features had a large range.  
 
 ## Fairness Analysis
-![fairness](/images/fairness.jpeg){: width="800" }
+<img src="/images/fairness.jpeg" alt="drawing" width="800"/>
+
  
 
 

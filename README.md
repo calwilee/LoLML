@@ -775,17 +775,21 @@ Before starting any modeling, we will first clean the dataset briefly. Just like
 Let’s start by creating a baseline model for prediction. This serves as a good starting point for more advanced modeling techniques. 
 
 > Quantitative Features
+
 - golddiffat15 
 - xpdiffat15 
 
 > Nominal Features
-- firstdragon 
-- firstbaron 
-- firstherald 
-- firstblood 
-- firsttothreetowers
 
-Response Variable: Result
+- firstdragon (0 / 1)
+- firstbaron (0 / 1)
+- firstherald (0 / 1)
+- firstblood (0 / 1)
+- firsttothreetowers (0 / 1)
+
+> Response Variable
+
+- Result win(1), lose(0)
 
 > Baseline Conclusion 
 

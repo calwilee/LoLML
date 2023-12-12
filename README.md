@@ -818,13 +818,7 @@ Similarly to gold differences, the greater of an xp advantage a team has over th
 
 > `inhibitors` (Nominal)
 
-> `soul_type` (Nominal)
-
-> `soul_type` (Nominal)
-
-> `soul_type` (Nominal)
-
-
+Inhibitors protect the team's nexuses. This makes this structure a very strong feature to include in our model for a number of reasons. Firstly, a team cannot damage the enemy team's nexus without destroying at least one inhibitor. Therefore a team cannot win if they do not break an inhibitor. This fact alone makes this feature very strong. Secondly, breaking an inhibitor grants a team super minions, effectively forcing one opponent to clear these minions, leaving them stuck in their base for 5 minutes, until the inhibitor respawns. This gives the team a huge advantage in securing objectives, as they essentially will always have a numbers advantage. 
 
 
 

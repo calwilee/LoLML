@@ -816,7 +816,13 @@ Similarly to gold differences, the greater of an xp advantage a team has over th
 
 ## Additional Features
 
-> `inhibitors`
+> `inhibitors` (Nominal)
+
+> `soul_type` (Nominal)
+
+> `soul_type` (Nominal)
+
+> `soul_type` (Nominal)
 
 
 

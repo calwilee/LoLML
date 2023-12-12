@@ -774,24 +774,30 @@ Before starting any modeling, we will first clean the dataset briefly. Just like
 
 Let’s start by creating a baseline model for prediction. This serves as a good starting point for more advanced modeling techniques. 
 
-> Quantitative Features
+## Quantitative Features
 
-- `golddiffat15`
-- `xpdiffat15`
+> `golddiffat15`
 
-> Nominal Features
+> `xpdiffat15`
 
-- `firstdragon` (0 / 1)
-- `firstbaron` (0 / 1)
-- `firstherald` (0 / 1)
-- `firstblood` (0 / 1)
-- `firsttothreetowers` (0 / 1)
+## Nominal Features
 
-> Response Variable
+> `firstdragon` (0 / 1)
 
-- `Result` win(1), lose(0)
+> `firstbaron` (0 / 1)
 
-> Baseline Conclusion 
+> `firstherald` (0 / 1)
+
+> `firstblood` (0 / 1)
+
+> `firsttothreetowers` (0 / 1)
+
+
+## Response Variable
+
+> `Result` win(1), lose(0)
+
+## Baseline Conclusion 
 
 Our baseline model reached a training accuracy of around 99.9% and a test accuracy of around 84%. The discrepancy between the training and test accuracy is due to our model overfitting to the training data and not being able to generalize as well as we would like. Despite this however, we believe that our model has good performance as it has good accuracy. In addition to that, it makes intuitive sense that teams with initial gold, experience and objective advantage are more likely to win, making our features that we selected a good base to start with. Lets see if we can take our model a bit further!
 
@@ -819,6 +825,10 @@ Similarly to gold differences, the greater of an xp advantage a team has over th
 > `inhibitors` (Nominal)
 
 Inhibitors protect the team's nexuses. This makes this structure a very strong feature to include in our model for a number of reasons. Firstly, a team cannot damage the enemy team's nexus without destroying at least one inhibitor. Therefore a team cannot win if they do not break an inhibitor. This fact alone makes this feature very strong. Secondly, breaking an inhibitor grants a team super minions, effectively forcing one opponent to clear these minions, leaving them stuck in their base for 5 minutes, until the inhibitor respawns. This gives the team a huge advantage in securing objectives, as they essentially will always have a numbers advantage. 
+
+## Algorithm and Hyperparameters
+
+For this model, we chose to use a Random Forest classifier in order to train multiple decision trees on our data and reduce the risk of overfitting. 
 
 
 

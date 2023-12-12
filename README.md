@@ -795,6 +795,7 @@ Let’s start by creating a baseline model for prediction. This serves as a good
 
 Our baseline model reached a training accuracy of around 99.9% and a test accuracy of around 84%. The discrepancy between the training and test accuracy is due to our model overfitting to the training data and not being able to generalize as well as we would like. Despite this however, we believe that our model has good performance as it has good accuracy. In addition to that, it makes intuitive sense that teams with initial gold, experience and objective advantage are more likely to win, making our features that we selected a good base to start with. Lets see if we can take our model a bit further!
 
+![exciteporo](/images/excitedporo.webp) 
 ## Final Model
 Now that we've completed our base model, it is time to improve upon it and create our final model. 
 We will choose to keep gold and xp differences, as we feel that these features are integral to predicting game outcomes. As for the other features we used in our baseline model, we feel that we can improve upon these, so we will be using ________. We will also construct additional features.

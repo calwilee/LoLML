@@ -769,7 +769,7 @@ Before starting any modeling, we will first clean the dataset briefly. Just like
   </tbody>
 </table> 
 
-
+![poro](/images/training.webp)
 ## Baseline Model
 
 Let’s start by creating a baseline model for prediction. This serves as a good starting point for more advanced modeling techniques. 
@@ -788,7 +788,7 @@ Let’s start by creating a baseline model for prediction. This serves as a good
 - `firsttothreetowers` (0 / 1)
 
 > Response Variable
-s
+
 - `Result` win(1), lose(0)
 
 > Baseline Conclusion 

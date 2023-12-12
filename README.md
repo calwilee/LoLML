@@ -1,2 +1,2 @@
-![lolimg](/images/lolbanner.jpeg)
+![lolimg](/images/arcanaryze.jpeg)
 ## Introduction

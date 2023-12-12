@@ -848,10 +848,10 @@ We did not tune our hyperparameters for our baseline model, compared to the tuni
 > Feature Engineering
 
 We engineered our own feature, `soul_type`. This feature essentially summarizes the dragon columns. We used `OneHotEncoder()` on this feature. 
-We applied StandardScaler() to both `golddiffat15` and `xpdiffat15`, as these features had a large range.  
+We applied `StandardScaler()` to both `golddiffat15` and `xpdiffat15`, as these features had a large range.  
 
 ## Fairness Analysis
-![fairness](/images/fairness.jpeg)
+![fairness](/images/fairness.jpeg){: width="800" }
  
 
 

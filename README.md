@@ -1,3 +1,2 @@
+![lolimg](/images/lolbanner.jpeg)
 ## Introduction
-hi
-hello

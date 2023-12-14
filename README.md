@@ -879,7 +879,7 @@ To finish, we will run a fairness analysis on our model. For this analysis, we w
 </div>
 
 
-Because our **p-value of 0.1653** is greater than our alpha of **0.05**, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions
+Because our **p-value of 0.5883** is greater than our alpha of **0.05**, we fail to reject our null hypothesis. The data provided suggests that our model predicts the outcome with equal accuracy between the South Korea and North America regions.
 
 
 

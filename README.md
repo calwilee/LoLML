@@ -791,7 +791,7 @@ Let’s start by creating a baseline model for prediction. This serves as a good
 
 - `Result` win(1), lose(0)
 
-All of our nominal data was already encoded as 0 or 1, so we had no need to one hot encode it! 
+All of our nominal data was already encoded as 0 or 1, so we had no need to one hot encode it! We passed through most of our features because of this in our pipeline. 
 
 > Baseline Conclusion 
 
